@@ -12,18 +12,6 @@ function indexUpdate()
         {
             document.getElementById('videoPlayer').src = "https://archive.org/download/" + mediaPath + "/" + mediaSource[parseFloat(document.getElementById("playbackIndex").value)];
             document.getElementById('videoPlayer').load();
-            
-            /* Direct Display Full Screen */
-            try{
-                if (document.getElementById('videoPlayer').requestFullscreen) {
-                  document.getElementById('videoPlayer').requestFullscreen();
-                } else if (document.getElementById('videoPlayer').mozRequestFullScreen) {
-                  document.getElementById('videoPlayer').mozRequestFullScreen();
-                } else if (document.getElementById('videoPlayer').webkitRequestFullscreen) {
-                  document.getElementById('videoPlayer').webkitRequestFullscreen();
-                }
-            }
-            catch(err) {}
         }
     }
     else if(loginToken == "selected-2")
@@ -154,6 +142,20 @@ function backGroundProcess()
                     document.getElementById('videoPlayer').addEventListener('ended',function(){
                         playNextItem();
                     });
+                    
+                    document.getElementById('videoPlayer').addEventListener('loadeddata', function() {
+                        /* Direct Display Full Screen */
+                        try{
+                            if (document.getElementById('videoPlayer').requestFullscreen) {
+                              document.getElementById('videoPlayer').requestFullscreen();
+                            } else if (document.getElementById('videoPlayer').mozRequestFullScreen) {
+                              document.getElementById('videoPlayer').mozRequestFullScreen();
+                            } else if (document.getElementById('videoPlayer').webkitRequestFullscreen) {
+                              document.getElementById('videoPlayer').webkitRequestFullscreen();
+                            }
+                        }
+                        catch(err) {}
+                    }, false);
                     
                     loadPlaybackMedia();
                 });
