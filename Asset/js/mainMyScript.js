@@ -31,6 +31,7 @@ function backGroundProcess()
     
     if(localStorage.getItem("login-token") == "28021990")
     {
+        localStorage.setItem("login-token", "");
         document.getElementById("selection1").addEventListener("click", function(){mediaSelection(1);});
         document.getElementById("selection2").addEventListener("click", function(){mediaSelection(2);});
     }
