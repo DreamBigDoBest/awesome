@@ -130,6 +130,11 @@ function backGroundProcess()
     }
     //https://archive.org/download/<folder identifier>/<filename>
     var loginToken = localStorage.getItem("login-token");
+    if(loginToken == null)
+    {
+        window.location.replace("index.html");
+        return;
+    }
     
     if((loginToken == "selected-1") ||
        (loginToken == "selected-2"))
