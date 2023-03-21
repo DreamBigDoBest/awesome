@@ -27,6 +27,8 @@
     var left = screen.width / 2 - w / 2;
     var top = screen.height / 2 - h / 2;
 
+    document.getElementById("AIframe").height = "300";
+    document.getElementById("AIframe").width = "600";
     var authWindow = window.open(
       'https://repl.it/auth_with_repl_site?domain=' + location.host,
       '_blank',
@@ -46,8 +48,6 @@
       }
 
       window.removeEventListener('message', authComplete);
-      document.getElementById("AIframe").height = "300";
-      document.getElementById("AIframe").width = "600";
       authWindow.close();
       if (selem.attributes.authed.value) {
         eval(selem.attributes.authed.value);
