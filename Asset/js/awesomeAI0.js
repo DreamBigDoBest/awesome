@@ -46,7 +46,8 @@
       }
 
       window.removeEventListener('message', authComplete);
-
+      document.getElementById("AIframe").height = "300";
+      document.getElementById("AIframe").width = "600";
       authWindow.close();
       if (selem.attributes.authed.value) {
         eval(selem.attributes.authed.value);
