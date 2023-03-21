@@ -30,7 +30,7 @@
     document.getElementById("AIframe").height = "300";
     document.getElementById("AIframe").width = "600";
     var authWindow = window.open(
-      'https://repl.it/auth_with_repl_site?domain=' + location.host,
+      'https://repl.it/auth_with_repl_site?domain=chatgpt-client.techwithanirudh.repl.co',
       '_blank',
       'modal =yes, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' +
         w +
