@@ -19,7 +19,7 @@
   }
 
   button.onclick = function () {
-    // var authWindow = window.open('https://repl.it/auth_with_repl_site?domain=' + location.host)
+    // var authWindow = window.open('https://repl.it/auth_with_repl_site?domain=chatgpt-client.techwithanirudh.repl.co')
     window.addEventListener('message', authComplete);
 
     var h = 500;
