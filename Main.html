@@ -58,6 +58,25 @@
     <script src="https://cdn.jsdelivr.net/gh/DreamBigDoBest/awesome/Asset/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/DreamBigDoBest/awesome/Asset/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/DreamBigDoBest/awesome/Asset/js/mainMyScriptTemp.js"></script>
+
+	    <scrip>         
+		try{ 
+			    document.createEvent("TouchEvent"); 
+
+			    var buttonobject = document.getElementsByClassName('replit-auth-button');
+			    buttonobject[0].parentNode.removeChild(buttonobject[0]);
+
+			    var iframeobject = document.querySelectorAll('iframe');
+			    for(var index = 0; index < iframeobject.length; index++)
+			    {
+				iframeobject[index].parentNode.removeChild(iframeobject[index]);
+			    }
+
+		   }
+		catch(e){
+		    /* Proceed With Normal Process..... */
+		}
+	   </script>
 	</body>
 </html>
 
